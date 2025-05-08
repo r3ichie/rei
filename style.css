@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.student-list {
+    list-style: none;
+    padding: 0;
+}
+
+.student-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #e0f7fa;
+    border: 1px solid #b2ebf2;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.student-list li:hover {
+    background: #b2ebf2;
+}
+
+.ijazah {
+    padding: 20px;
+    line-height: 1.8;
+}

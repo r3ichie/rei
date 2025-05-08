@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Daftar Ijazah Siswa SMK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="main-page">
+        <h1>Daftar Ijazah Siswa SMK</h1>
+        <ul class="student-list">
+            <li onclick="showIjazah('ahmad')">Ahmad</li>
+            <li onclick="showIjazah('siti')">Siti</li>
+            <li onclick="showIjazah('budi')">Budi</li>
+            <li onclick="showIjazah('dewi')">Dewi</li>
+            <li onclick="showIjazah('rian')">Rian</li>
+        </ul>
+    </div>
+
+    <div class="container" id="ijazah-page" style="display: none;">
+        <h2>Ijazah Siswa</h2>
+        <div class="ijazah" id="ijazah-content"></div>
+        <button onclick="goBack()">Kembali</button>
+    </div>
+
+    <script>
+        const ijazahData = {
+            ahmad: `
+                <h3>IJAZAH</h3>
+                <p>Nama: Ahmad</p>
+                <p>NISN: 1234567890</p>
+                <p>Tempat/Tgl Lahir: Jakarta, 1 Januari 2006</p>
+                <p>Kompetensi Keahlian: Teknik Komputer dan Jaringan</p>
+                <p>Tahun Lulus: 2024</p>
+            `,
+            siti: `
+                <h3>IJAZAH</h3>
+                <p>Nama: Siti</p>
+                <p>NISN: 0987654321</p>
+                <p>Tempat/Tgl Lahir: Bandung, 5 Mei 2006</p>
+                <p>Kompetensi Keahlian: Akuntansi</p>
+                <p>Tahun Lulus: 2024</p>
+            `,
+            budi: `
+                <h3>IJAZAH</h3>
+                <p>Nama: Budi</p>
+                <p>NISN: 1122334455</p>
+                <p>Tempat/Tgl Lahir: Surabaya, 10 Oktober 2006</p>
+                <p>Kompetensi Keahlian: Rekayasa Perangkat Lunak</p>
+                <p>Tahun Lulus: 2024</p>
+            `,
+            dewi: `
+            <h3>IJAZAH</h3>
+            <p>Nama: Dewi</p>
+            <p>NISN: 5566778899</p>
+            <p>Tempat/Tgl Lahir: Yogyakarta, 15 Maret 2006</p>
+            <p>Kompetensi Keahlian: Multimedia</p>
+            <p>Tahun Lulus: 2024</p>
+            `,
+            rian: `
+            <h3>IJAZAH</h3>
+            <p>Nama: Rian</p>
+            <p>NISN: 6677889900</p>
+            <p>Tempat/Tgl Lahir: Semarang, 20 Februari 2006</p>
+            <p>Kompetensi Keahlian: Teknik Elektronika Industri</p>
+            <p>Tahun Lulus: 2024</p>
+            `
+        };
+
+        function showIjazah(nama) {
+            document.getElementById('main-page').style.display = 'none';
+            document.getElementById('ijazah-page').style.display = 'block';
+            document.getElementById('ijazah-content').innerHTML = ijazahData[nama];
+        }
+
+        function goBack() {
+            document.getElementById('main-page').style.display = 'block';
+            document.getElementById('ijazah-page').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
